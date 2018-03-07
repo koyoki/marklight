@@ -604,7 +604,7 @@ namespace MarkLight
         /// <summary>
         /// Gets view field info from a type.
         /// </summary>
-        public static MemberInfo GetFieldInfo(this Type type, string field, BindingFlags bindingFlags = BindingFlags.Public | BindingFlags.Instance)
+        public static MemberInfo GetFieldInfo(this Type type, string field, BindingFlags bindingFlags = BindingFlags.Public | BindingFlags.NonPublic | BindingFlags.Instance)
         {
             var fieldInfo = type.GetField(field, bindingFlags);
             if (fieldInfo != null)
