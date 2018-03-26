@@ -286,6 +286,11 @@ namespace MarkLight.Views.UI
         public IObservableList Items;
 
         /// <summary>
+        /// Index of the initial tab to show.
+        /// </summary>
+        public _int InitialSelectedIndex;
+
+        /// <summary>
         /// Indicates if tabs can be selected by the user.
         /// </summary>
         /// <d>Boolean indicating if tabs in the tab panel can be selected by the user.</d>
@@ -432,7 +437,7 @@ namespace MarkLight.Views.UI
                     }
 
                     // select first tab by default
-                    SelectTab(0, false);
+                    SelectTab(InitialSelectedIndex.Value, false);
                 }
             }
         }
