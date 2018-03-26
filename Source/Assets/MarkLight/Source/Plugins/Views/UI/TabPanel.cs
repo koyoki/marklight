@@ -501,7 +501,7 @@ namespace MarkLight.Views.UI
         /// </summary>
         public void SelectTab(Tab tab, bool animate = true, bool triggeredByClick = false)
         {
-            if (tab == null || (triggeredByClick && !CanSelect.Value) || tab.IsSelected.Value)
+            if (tab == null || (triggeredByClick && !CanSelect) || tab.IsSelected)
                 return;
 
             // select
